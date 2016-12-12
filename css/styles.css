@@ -1,35 +1,26 @@
+/* HEADER */
 body {
         background-image: url("backgroung.jpg");
+        font-family: Tahoma, sans-serif;
 }
 #wrapper {
     max-width: 1000px;
     margin: auto;
     background-color: #ffffff;
     border: 1px solid grey;
-    overflow: hidden;
-}
-#wrapper img.logo {
-    margin: 0;
-    padding: 0.7em 0 0 2em;
-    flow: left;
-}
-#wrapper img {
-    margin: 0;
-    padding: 0;/* 0.7em 0 0 2em;*/
-    flow: left;
+    box-shadow: 0 0 2px 1px;
+    position: relative;
 }
 
-#header {
-    margin: auto;
-    /*position: relative;*/
+img.logo {
+    position:absolute;;
+    top: 0.6em;
+    left: 2em;
 }
-
 .floating-box {
     float: right;
     width: 150px;
-    margin: 1em;
-    border: none;
-    font-family: Tahoma, sans-serif;
+    margin: 5px auto 5px auto;
     font-size: 12px;
     color: #128aa7;
     line-height: 1.5em;
@@ -37,21 +28,20 @@ body {
 p.shadow {
     font-weight: bold;
     text-shadow: 1px 1px #a7d3de;
-    display: inline;
-
+    color: #128aa7;
+    margin: 0px auto 5px auto;
 }
  #countries {
     clear:both;
     float: right;
     width: 400px;
-    margin: 0 20px 0 0;
+    margin: 19px 20px 0 0;
     padding: 0;
-    border: none;
-    font-family: Tahoma, sans-serif;
     font-size: 9px;
-    color: #128aa7;
 }
-
+figcaption a:link {
+    color:#128aa7;
+}
 .inline {
     display: inline-block;
     margin: 5px;
@@ -61,76 +51,155 @@ figcaption {
     text-align: center;
     margin-bottom: 5px;
 }
+img.withblueborder {
+    border-width: 1px;
+    border-style: solid;
+    border-top-color: #009999;
+    border-bottom-color: #009999;
+}
 
 
-/* STYLES FOR NAVIGATION PANE (HORIZONTAL + DROPDOWN MENU) */
-#navigation {
-    float: left;
-    width: 100%; /*на весь враппер */
-    list-style: none; /* прячем маркеры */
 
-    /*display: block;
+
+/* MAIN MENU + DROPDOWNS */
+ul {
+    display: block;
     margin: 0;
-    padding: 0;*/
-    /*overflow: hidden;*/
-    background-color: #323232;
-}
-#navigation li {
-    float: left;
-    margin-right: 10px; /* делаем отступ чтобы пункты меню не сливались */
-     position: relative;
-     display: block;
-}
-#navigation li a{
-    display:block;
-    padding:5px;
-    color:#fff;
-    background:#333;
-    text-decoration:none;
-    text-shadow:1px 1px 1px rgba(0,0,0,0.75); /* Тень текста, чтобы приподнять его на немного */
-    -moz-border-radius:2px;
-    -webkit-border-radius:2px;
-    border-radius:2px;
-}
-/*#navigation li a:hover{
-    color:#fff;
-    background:#6b0c36;
-}*/
-
-#navigation ul{
+    padding: 0;
     list-style: none;
-    position: absolute;
-    left:-9999px; /*скрываем экраном когда не нужно*/
-    opacity: 0;
-    -webkit-transition:0.25s linear opacity; /* В Webkit выпадающие пункты будут проявляться */
 }
 
-#navigation ul li{
-    padding-top:1px; /* Вводим отступ между li чтобы создать иллюзию разделенных пунктов меню */
-    float:none;
-    background:#333;
+ul:after {
+    display: block;
+    content: ' ';
+    clear: both;
+    float: none;
 }
-#navigation ul a{
-    white-space:nowrap; /* Останавливаем перенос текста и создаем многострочный выпадающий пункт */
-    display:block;
+
+.menu {
+    width: 100%;
+    margin: 0 0 5px 0;
+    padding-top: 2px;
+    padding-bottom: 3px;
+    background-color: #333;
+    font-size: 14px;
+    border: none;
+    box-shadow: 0 3px 5px 0px;
 }
-#navigation li:hover ul{ /* Выводим выпадающий пункт при наведении курсора */
-    left:0; /* Приносим его обратно на экран, когда нужно */
-    opacity:1; /* Делаем непрозрачным */
+
+.menu > li {
+    float: left;
+    margin-left: 52px;
+    position: relative;
 }
-#navigation li:hover a{ /* Устанавливаем стили для верхнего уровня, когда выводится выпадающий список */
-    background:#6b0c36;
-    background:rgba(107,12,54,0.75); /* Выглядит полупрозрачным */
-    text-decoration:underline;
+
+.menu > li > a {
+    display: block;
+    padding: 5px;
+    color: #fff;
+    text-decoration: none;
 }
-#navigation li:hover ul a{ /* Изменяем некоторые стили верхнего уровня при выводе выпадающего пункта */
-    text-decoration:none;
-    -webkit-transition:-webkit-transform 0.075s linear;
+
+/*drop-downs*/
+.submenu {
+    display: none;
+    position: absolute;
+    width: 150px;
+    top: 28px;
+    list-style: none;
+    box-shadow: 0px 7px 10px -1px;
+    background: #333333;
 }
-#navigation li:hover ul li a:hover{ /* Устанавливаем стили для выпадающих пунктов, когда курсор наводится на конкретный пункт */
-    background:#333;
-    background:rgba(51,51,51,0.75); /* Будет полупрозрачным */
-    text-decoration:underline;
-    -moz-transform:scale(1.05);
-    -webkit-transform:scale(1.05);
+
+.submenu > li {
+    display: block;
+}
+
+.submenu > li > a {
+    display: block;
+    /*width: 150px;*/
+    padding-top: 6px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.submenu > li > a:hover {
+    text-decoration: underline;
+}
+
+.menu > li:hover > ul.submenu {
+    display: block;
+    z-index: 9999;
+    /*padding: 5px;*/
+    /*color: #fff;*/
+}
+
+
+
+
+
+
+
+
+/* MAIN */
+div.mytable {
+    width: 100%;
+    height: auto;
+    display: table;
+    z-index: 1;
+}
+.tr {
+    height: auto;
+    display: table-row;
+    margin-top: 5px;
+    z-index: 1;
+}
+div.leftcolumn, div.rightcolumn{
+    width: 21%;
+    overflow: hidden;
+    position:relative;
+    background-color: #edeef0;
+    padding: 0 0 0 1em;
+    margin: 5px 0 7px 0;
+    height: 100%;
+    display: table-cell;
+    float: none;
+    z-index: 1;
+}
+div.middle {
+    height: 100%;
+    display: table-cell;
+    float: none;
+}
+
+div.leftcolumn {
+    /*float: none;*/
+    border-right: 1px solid #cccccc;
+}
+div.rightcolumn {
+    /*float: none;*/
+    border-left: 1px solid #cccccc;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.5em;
+    color: #333333;
+    margin-bottom: 10px;
+}
+h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333333;
+    margin: 7px auto;
+    text-align: center;
+}
+p.footer {
+    color: #ffffff;
+    font-size: 12px;
+    text-align: center;
+    padding: 0.5em;
+    margin: 0;
 }

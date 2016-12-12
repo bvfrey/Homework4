@@ -1,94 +1,112 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Asia-Holidays</title>
-        <link href="css/reset.css" rel="stylesheet">
-        <link href="css/styles.css" rel="stylesheet">
-    </head>
+<head>
+    <meta charset="utf-8">
+    <title>Asia-Holidays</title>
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
 
-    <body>
-        <div id="wrapper">
-<!-- HEADER -->
-            <div id="header">
-                <img class="logo" src="img/logo.png" alt="">
-                <div class="floating-box">
-                    <p class="shadow">Наши контакты:</p>
-                    +9-098-765-4321<br>
-                    +9-0123-456-890<br>
-                    info@asia-holidays.com
-                </div>
-                <div id="countries">
-                    <figure class="inline">
-                		<img src="img/nepal.jpg" alt="Maldives">
-                		<figcaption>Мальдивы</figcaption>
-                	</figure>
-                    <figure class="inline">
-                		<img src="img/nepal.jpg" alt="Sri-Lanka">
-                		<figcaption>Шри-Ланка</figcaption>
-                	</figure>
-                    <figure class="inline">
-                		<img src="img/nepal.jpg" alt="Butan">
-                		<figcaption>Бутан</figcaption>
-                	</figure>
-                    <figure class="inline">
-                        <img src="img/nepal.jpg" alt="Tibet">
-                        <figcaption>Тибет</figcaption>
-                    </figure>
-                    <figure class="inline">
-                		<img src="img/nepal.jpg" alt="Nepal">
-                		<figcaption>Непал</figcaption>
-                	</figure>
-                    <figure class="inline">
-                		<a href="#"><img src="img/india.jpg" alt="India"></a>
-                		<figcaption><a href="#">Индия</a></figcaption>
-                	</figure>
+<body>
+    <div id="wrapper">
 
-
-
-                </div> <!-- links to countries -->
-            </div>  <!-- header -->
-            <div>
-                <img src="img/paradise.jpg" alt="paradise">
+        <!-- HEADER -->
+        <div>
+            <div class="floating-box">
+                <p class="shadow">Наши контакты:</p>
+                +9-098-765-4321<br>
+                +9-0123-456-890<br>
+                info@asia-holidays.com
             </div>
-<!-- ########################################################## -->
-            <!-- MAIN MENU + DROPDOWNS -->
-            <div>
-            	<ul id="navigation">
-            		<li><a href="#">Главная</a></li>
-            		<li><a href="#">Путешествие &#9662;</a>
-                        <ul>
-                            <li><a href="#">Путешествие 1</a></li>
-                            <li><a href="#">Путешествие 2</a></li>
-                            <li><a href="#">Путешествие 3</a></li>
-                            <li><a href="#">Путешествие 4</a></li>
-                            <li><a href="#">Путешествие 5</a></li>
-                        </ul>
-                    </li>
-            		<li><a href="#">Услуги &#9662;</a></li>
-                    <ul>
-                        <li><a href="#">Услуга 1</a></li>
-                        <li><a href="#">Услуга 2</a></li>
-                        <li><a href="#">Услуга 3</a></li>
-                        <li><a href="#">Услуга 4</a></li>
-                    </ul>
-            		<li><a href="#">Партнерам &#9662;</a></li>
-                    <ul>
-                        <li><a href="#">Предложение 1</a></li>
-                        <li><a href="#">Предложение 2</a></li>
-                        <li><a href="#">Предложение 3</a></li>
-                    </ul>
-            		<li><a href="#">Отзывы клиентов</a></li>
-            		<li><a href="#">О нас</a></li>
-            		<li><a href="#">Контакты</a></li>
-            	</ul>
-            </div>
-
-<!-- ########################################################## -->
-
-
-
-
+            <div id="countries"> <!-- links to countries -->
+                <figure class="inline">
+            		<a href="#"><img src="img/maldives.jpg" alt="Maldives"></a>
+            		<figcaption><a href="#">Мальдивы</a></figcaption>
+            	</figure>
+                <figure class="inline">
+            		<a href="#"><img src="img/sri_lanka.jpg" alt="Sri-Lanka"></a>
+            		<figcaption><a href="#">Шри-Ланка</a></figcaption>
+            	</figure>
+                <figure class="inline">
+            		<a href="#"><img src="img/butan.jpg" alt="Butan"></a>
+            		<figcaption><a href="#">Бутан</a></figcaption>
+            	</figure>
+                <figure class="inline">
+                    <a href="#"><img src="img/tibet.jpg" alt="Tibet"></a>
+                    <figcaption><a href="#">Тибет</a></figcaption>
+                </figure>
+                <figure class="inline">
+            		<a href="#"><img src="img/nepal.jpg" alt="Nepal"></a>
+            		<figcaption><a href="#">Непал</a></figcaption>
+            	</figure>
+                <figure class="inline">
+            		<a href="#"><img src="img/india.jpg" alt="India"></a>
+            		<figcaption><a href="#">Индия</a></figcaption>
+            	</figure>
+            </div> <!-- links to countries -->
+            <img class="logo" src="img/logo.png" alt="">
+        </div>  <!-- header -->
+        <div>
+            <img class="withblueborder" src="img/paradise.jpg" alt="paradise">
         </div>
-    </body>
+
+        <!-- MAIN MENU + DROPDOWNS -->
+        <ul class="menu">
+            <li><a href="#">Главная</a></li>
+    		<li><a href="#">Путешествие &#9662;</a>
+                <ul class="submenu">
+                    <li><a href="#">Путешествие 1</a></li>
+                    <li><a href="#">Путешествие 2</a></li>
+                    <li><a href="#">Путешествие 3</a></li>
+                    <li><a href="#">Путешествие 4</a></li>
+                    <li><a href="#">Путешествие 5</a></li>
+                </ul>
+            </li>
+    		<li><a href="#">Услуги &#9662;</a>
+                <ul class="submenu">
+                    <li><a href="#">Услуга 1</a></li>
+                    <li><a href="#">Услуга 2</a></li>
+                    <li><a href="#">Услуга 3</a></li>
+                    <li><a href="#">Услуга 4</a></li>
+                </ul>
+            </li>
+    		<li><a href="#">Партнерам &#9662;</a>
+                <ul class="submenu">
+                    <li><a href="#">Предложение 1</a></li>
+                    <li><a href="#">Предложение 2</a></li>
+                    <li><a href="#">Предложение 3</a></li>
+                </ul>
+            </li>
+    		<li><a href="#">Отзывы клиентов</a></li>
+    		<li><a href="#">О нас</a></li>
+    		<li><a href="#">Контакты</a></li>
+    	</ul>
+
+        <!-- MAIN -->
+        <div class="mytable">
+            <div class="tr">
+                <div class="leftcolumn">
+                    <h2>Информация</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
+                    </p>
+                </div>
+                <div class="middle">
+                    <p>
+                    </p>
+                </div>
+                <div class="rightcolumn">
+                    <h2>Новости</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
+                    </p>
+                </div> <!-- right collumn -->
+            </div> <!-- class tr -->
+        </div> <!-- class mytable -->
+
+    </div> <!-- wrapper -->
+
+    <p class="footer">Copyright(C) asia-holidays.com. 2010</p>
+
+</body>
 </html>
