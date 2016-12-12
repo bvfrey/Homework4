@@ -1,8 +1,10 @@
 /* HEADER */
 body {
-        background-image: url("backgroung.jpg");
-        font-family: Tahoma, sans-serif;
+    background: #0D74A1 url("../img/backgroung.jpg");
+    background-repeat: repeat-x;
+    font-family: Tahoma, sans-serif;
 }
+
 #wrapper {
     max-width: 1000px;
     margin: auto;
@@ -78,13 +80,12 @@ ul:after {
 
 .menu {
     width: 100%;
-    margin: 0 0 5px 0;
-    padding-top: 2px;
-    padding-bottom: 3px;
+    margin: 0;
     background-color: #333;
     font-size: 14px;
     border: none;
     box-shadow: 0 3px 5px 0px;
+    border-bottom: 1px solid black;
 }
 
 .menu > li {
@@ -96,6 +97,8 @@ ul:after {
 .menu > li > a {
     display: block;
     padding: 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
     color: #fff;
     text-decoration: none;
 }
@@ -109,6 +112,7 @@ ul:after {
     list-style: none;
     box-shadow: 0px 7px 10px -1px;
     background: #333333;
+    border-top: 1px solid black;
 }
 
 .submenu > li {
@@ -117,7 +121,6 @@ ul:after {
 
 .submenu > li > a {
     display: block;
-    /*width: 150px;*/
     padding-top: 6px;
     padding-bottom: 5px;
     padding-left: 10px;
@@ -132,28 +135,21 @@ ul:after {
 .menu > li:hover > ul.submenu {
     display: block;
     z-index: 9999;
-    /*padding: 5px;*/
-    /*color: #fff;*/
 }
-
-
-
-
-
 
 
 
 /* MAIN */
-div.mytable {
+.mytable {
     width: 100%;
     height: auto;
     display: table;
     z-index: 1;
+    margin-top: 5px;
 }
 .tr {
     height: auto;
     display: table-row;
-    margin-top: 5px;
     z-index: 1;
 }
 div.leftcolumn, div.rightcolumn{
